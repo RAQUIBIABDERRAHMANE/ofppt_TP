@@ -1,0 +1,145 @@
+
+
+
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 30px;
+    font-size: 40px;
+    /* zat hadxi */
+}
+
+.side-nav {
+    position: fixed;
+    top: 10%;
+    left: 25px;
+    z-index: 1000;
+    /* zat hadi bax les lien ikono hma li kaynin l9dam kolxi */
+}
+
+.side-nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-link {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .2s;
+    margin-top: 20px;
+}
+
+.side-link:hover,
+.side-link.active {
+    background: #0A6CF1;
+    transform: scale(1.08);
+}
+
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 40%;
+    margin-bottom: 20px;
+    /* hna aslan makayn lax tcopi dakxi li f global.css lhna hit mlinki m3a htma hir diri card class o sf hna 3dlt hir 3la l widht nta3ha sf */
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #BDD8E9;
+    margin-bottom: 20px;
+    /* zat margin bottom bax ib3d 3la <p> */
+}
+
+.card p {
+    color: black;
+    line-height: 1.6;
+    color: white;
+
+}
+
+.position1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    /* hna drt whda hda whda */
+}
+/*____________responsive tab___________*/
+@media (max-width: 920px) {
+        .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .position1{
+        
+        padding-left: 80px;
+        padding-right:10px ;
+    }
+    h1{
+        padding-top: 70px;
+    }
+}
+/*____________responsive phone___________*/
+@media (max-width: 600px) {
+
+
+    .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .section-title {
+        padding-top: 80px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .position1 {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .card {
+        width: 100%;
+        
+    }
+}

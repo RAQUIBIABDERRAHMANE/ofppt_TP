@@ -1,0 +1,272 @@
+/* Background Shapes */
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.09;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondary);
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--accent);
+    top: 35%;
+    right: 8%;
+}
+
+.shape-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--neutral);
+    bottom: 15%;
+    left: 15%;
+}
+
+.shape-4 {
+    width: 450px;
+    height: 450px;
+    background: var(--light-bg);
+    top: 30%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+/* Side Navigation */
+.side-nav {
+    position: fixed;
+    top: 10%;
+    left: 25px;
+    z-index: 1000;
+    /* zat hadi bax les lien ikono hma li kaynin l9dam kolxi */
+}
+
+.side-nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-link {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .2s;
+    margin-top: 20px;
+}
+
+.side-link:hover,
+.side-link.active {
+    background: #0A6CF1;
+    transform: scale(1.08);
+}
+
+.card {
+    margin: 20px;
+}
+
+.aa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+span {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.btn-primary {
+    border: 1px solid transparent;
+    border-radius: 70px;
+    padding: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 29, 57, 0.5);
+    color: var(--white);
+    border-radius: 12px;
+    border: 1px solid rgba(123, 189, 232, 0.2);
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(0, 29, 57, 0.7);
+    box-shadow: 0 0 0 3px rgba(78, 142, 162, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(189, 216, 233, 0.5);
+    font-size: 0.98rem;
+}
+
+/* Contact Header */
+.contact-header.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 2.5rem auto;
+    max-width: 700px;
+}
+
+.contact-header.centered h1 {
+    font-size: 2.7rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding-top: 50px;
+}
+
+.contact-header.centered p {
+    color: var(--text);
+    font-size: 1.18rem;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/*____________responsive tab.___________*/
+@media (max-width: 920px) {
+    .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .aa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    h1{
+        margin-top: 30px;
+    }
+}
+
+
+/*____________responsive phone___________*/
+
+@media (max-width: 600px) {
+
+    .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+
+    .aa {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0px;
+
+    }
+
+    .card {
+        margin: 0px;
+    }
+
+    .contact-header.centered h1 {
+        padding-top: 100px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        gap: 10px;
+        flex-wrap: wrap;
+
+    }
+
+}

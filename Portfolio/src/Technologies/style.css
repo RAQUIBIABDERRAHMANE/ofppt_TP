@@ -1,0 +1,202 @@
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.09;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondary);
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--accent);
+    top: 35%;
+    right: 8%;
+}
+
+.shape-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--neutral);
+    bottom: 15%;
+    left: 15%;
+}
+
+.shape-4 {
+    width: 450px;
+    height: 450px;
+    background: var(--light-bg);
+    top: 30%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    /* zat hadxi */
+}
+
+.side-nav {
+    position: fixed;
+    top: 10%;
+    left: 25px;
+    z-index: 1000;
+    /* zat hadi bax les lien ikono hma li kaynin l9dam kolxi */
+}
+
+.side-nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-link {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .2s;
+    margin-top: 20px;
+}
+
+.side-link:hover,
+.side-link.active {
+    background: #0A6CF1;
+    transform: scale(1.08);
+}
+
+
+
+
+
+
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 40%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #BDD8E9;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.position1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/*____________responsive tab___________*/
+
+@media (max-width: 920px) {
+        .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .position1{
+        
+        padding-left: 80px;
+        padding-right:10px ;
+    }
+    h1{
+        padding-top: 80px;
+    }
+}
+/*____________responsive phone___________*/
+
+@media (max-width: 600px) {
+
+    .side-nav {
+        display: flex;
+        top: -8px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        padding-bottom: 11px;
+        background-color: rgba(20, 0, 85, 0.096);
+        backdrop-filter: blur(9px);
+    }
+
+    .side-nav-items {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .section-title {
+        padding-top: 90px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .position1{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .card{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+}
